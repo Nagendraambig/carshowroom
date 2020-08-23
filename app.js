@@ -25,7 +25,7 @@ db.connect(function(error){
         console.log('connected');    
 })
 app.get("/", function(req, res){
-    res.render('home');
+    res.render('index');
 })
 app.get("/cars", function(req, res){
     var sql = "SELECT * FROM CARS";
