@@ -1,0 +1,79 @@
+<%- include('partials/header.ejs') -%>
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav mr-auto">
+                <li class="nav-item  ml-md-3"><a class="nav-link" href="/"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                <li class="nav-item  ml-md-3"><a class="nav-link" href="/cars"><span class="fa fa-car fa-lg"></span> Cars</a></li>
+                <li class="nav-item  ml-md-3"><a class="nav-link" href="/customer"><span class="fa fa-id-card fa-lg"></span> Customer</a></li>
+                <li class="nav-item  ml-md-3 active"><a class="nav-link" href="/booking"><span class="fa fa-address-card fa-lg"></span> Booking</a></li>
+                <li class="nav-item  ml-md-3"><a href="/addcustomer" class="nav-link"><span class="fa fa-info fa-lg"></span>Add Customer</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="cont">
+    <div class="row ">
+    <!-- <h1 class="hello">Add customers details here</h1> -->
+    <form class="form" action="/booking" method="post">
+        <h1>ADD CUSTOMER DETAILS</h1>
+        <div class="form-group m-5">
+            <input type="text" class="form-control p-4 text" name="id" placeholder="Customer Name">
+        </div>
+        <div class="form-group m-5">
+            <input type="text" class="form-control p-4 text" name="" placeholder="Customer address">
+        </div>
+        <div class="form-group m-5">
+            <input type="text" class="form-control p-4 text" name="email" placeholder="Customer email">
+        </div>
+        <div class="form-group m-5">
+            <input type="text" class="form-control p-4 text" name="phone" placeholder="Customer phone">
+        </div>
+        <div class="form-group m-5">
+            <input type="text" class="form-control p-4 text" name="car" placeholder="Car Id">
+        </div>
+        <!-- <input type="submit"> -->
+        <div class="form-group m-5">
+            <button class="btn btn-large btn-primary btn-block p-4">Submit</a></button>
+        </div>
+    </form>
+    </div>
+</div>
+<%- include('partials/footer.ejs') -%>
+
+<div class="col-12 col-md-6">
+    <div class="card">
+        <img src="/images/avatar.png" class="card-img-top c-image col-12 col-md-3 offset-md-1" alt="Customer">
+        <div class="card-body col-12 col-md-8">
+            <div class="row">
+                <dl class="col-6">Name:</dl>
+                <dr class="col-6"><%= ele.NAME %></dr>
+            <div class="info" id = "info">
+                <ul class="list-unstyled">
+                    <li class="col-12 d-flex list">
+                        <dl class="col-6">Phone:</dl>
+                        <dr class="col-6"><%= ele.PHONE %></dr>
+                    <li>
+                    <li class="col-12 d-flex list">
+                        <dl class="col-6">Email:</dl>
+                        <dr class="col-6"><%= ele.EMAIL %></dr>
+                    <li>
+                    <li class="col-12 d-flex list">
+                        <dl class="col-6">Address:</dl>
+                        <dr class="col-6"><%= ele.ADDRESS %></dr>
+                    <li>
+                    <li class="col-12 d-flex list">
+                        <dl class="col-6">Position:</dl>
+                        <dr class="col-6"><%= ele.POSITION %></dr>
+                    </li>
+                    <li class="col-12 d-flex list">
+                        <dl class="col-6">SALARY:</dl>
+                        <dr class="col-6"><%= ele.SALARY %></dr>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+        </div>
+    </div>
+</div>

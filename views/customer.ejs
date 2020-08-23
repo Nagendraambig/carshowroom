@@ -1,0 +1,76 @@
+<%- include('partials/header.ejs') -%>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+                    <li class="nav-item  ml-md-3"><a class="nav-link" href="/"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item  ml-md-3"><a class="nav-link" href="/cars"><span class="fa fa-car fa-lg"></span> Cars</a></li>
+                    <li class="nav-item  ml-md-3 active"><a class="nav-link" href="/customer"><span class="fa fa-id-card fa-lg"></span> Customer</a></li>
+                    <li class="nav-item  ml-md-3"><a href="/addcustomer" class="nav-link"><span class="fa fa-info fa-lg"></span>Add Customer</a></li>
+            </ul>
+                    <ul class="navbar-nav mr-auto">
+                        <form class="form-inline ml-md-3" action="/custsearch" method="post">
+                            <input class="form-control mr-sm-5" type="text" name="name" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                    </ul>
+            </ul>
+        </div>
+    </nav>
+    <div class="cont">
+            <div class="row" >
+                <% detail.forEach(function(ele){ %>
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <img src="/images/avatar.png" class="card-img-top c-image" alt="Customer">
+                            <div class="card-body">
+                                <div class="row">
+                                    <dl class="col-6">Name:</dl>
+                                    <dr class="col-6"><%= ele.CUST_NAME %></dr>
+                                </div>
+                                <span class="info d-none" id = "info">
+                                    <ul class="list-unstyled collapse" id ="cust">
+                                        <!-- <li class="col-12 d-flex list">
+                                            
+                                        </li> -->
+                                        <li class="col-12 d-flex list">
+                                            <dl class="col-6">Phone:</dl>
+                                            <dr class="col-6"><%= ele.CUST_PHONE %></dr>
+                                        <li>
+                                        <li class="col-12 d-flex list">
+                                            <dl class="col-6">Email:</dl>
+                                            <dr class="col-6"><%= ele.CUST_EMAIL %></dr>
+                                        <li>
+                                        <li class="col-12 d-flex list">
+                                            <dl class="col-6">Car:</dl>
+                                            <dr class="col-6"><%= ele.CAR_NAME %></dr>
+                                        <li>
+                                        <li class="col-12 d-flex list">
+                                            <dl class="col-6">Purchase Date:</dl>
+                                            <dr class="col-6"><%= ele.PURCHASE_DATE %></dr>
+                                            <!-- .toDateString() -->
+                                        </li>
+                                        <li class="col-12 d-flex list">
+                                            <dl class="col-6">Address:</dl>
+                                            <dr class="col-6"><%= ele.CUST_ADDRESS %></dr>
+                                        </li>
+                                        <li class="col-12 d-flex list" style="border-bottom: 1px solid black;">
+                                            <dl class="col-6">Price:</dl>
+                                            <dr class="col-6"><%= ele.PRICE %></dr>
+                                        </li>
+                                    </ul>
+                                </span>
+                            <!-- </div> -->
+                                <button class="btn btn-primary btn-block" id="tar">Info</button>
+                                  <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="collapseExample">
+                                    More Info
+                                  </button> -->
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+    </div>
+<%- include('partials/footer.ejs') -%>
