@@ -1,12 +1,12 @@
 {
-  "name": "carshowroom",
+  "name": "showroom",
   "version": "1.0.0",
   "description": "car showroom database",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nagendra",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -18,5 +18,14 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
     "popper.js": "^1.16.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagendraambig/car-showroom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nagendraambig/car-showroom/issues"
+  },
+  "homepage": "https://github.com/Nagendraambig/car-showroom#readme"
 }
