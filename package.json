@@ -2,7 +2,7 @@
   "name": "showroom",
   "version": "1.0.0",
   "description": "car showroom database",
-  "main": "index.js",
+  "homepage": "https://github.com/Nagendraambig/car-showroom",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/Nagendraambig/car-showroom/issues"
   },
-  "homepage": "https://github.com/Nagendraambig/car-showroom#readme"
+  //"homepage": "https://github.com/Nagendraambig/car-showroom#readme"
 }
